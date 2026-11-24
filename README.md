@@ -2,7 +2,7 @@
 
 One-page portfolio site for Serena Lee, a freelance wedding and portrait photographer.
 
-Plain HTML and CSS. There is no build step and no dependencies.
+Plain HTML and CSS, with a dark theme. There is no build step and no dependencies.
 
 ## Files
 

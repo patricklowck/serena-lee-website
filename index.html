@@ -10,15 +10,15 @@
 <style>
   /* Layout idea: one quiet column of generous space; the photographs are the only loud thing. */
   :root {
-    --bg: #e8e4dd;          /* muted warm stone */
-    --ink: #2b2723;         /* soft warm black */
-    --ink-soft: #6a635b;    /* secondary text */
-    --accent: #8a5a44;      /* clay, used only for the button and link */
-    --frame: #d9d3c9;       /* placeholder tone */
+    --bg: #1c1a18;          /* warm charcoal */
+    --ink: #ece6dd;         /* soft warm white */
+    --ink-soft: #a39b91;    /* secondary text */
+    --accent: #d0926f;      /* light clay, used only for the button and link */
+    --frame: #2a2724;       /* placeholder tone */
     --font-display: "Instrument Serif", "Iowan Old Style", Georgia, serif;
     --font-body: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
     --gutter: clamp(20px, 5vw, 64px);
-    color-scheme: light;
+    color-scheme: dark;
   }
 
   * { box-sizing: border-box; margin: 0; }
@@ -74,13 +74,13 @@
     padding: 16px 34px;
     border-radius: 999px;
     background: var(--accent);
-    color: #f6f1ea;
+    color: #1c1a18;
     font-weight: 500;
     font-size: 1rem;
     text-decoration: none;
     transition: background-color .2s ease;
   }
-  .button:hover { background: #744833; }
+  .button:hover { background: #e0a584; }
 
   /* Portfolio */
   .work { padding-bottom: clamp(88px, 14vw, 176px); }
@@ -99,12 +99,12 @@
   }
   .frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
   /* Placeholder tones. Delete these and drop an <img> inside each .frame. */
-  .t1 { background: #d6cdc0; }
-  .t2 { background: #cfd0c6; }
-  .t3 { background: #dccdc4; }
-  .t4 { background: #c9c9c8; }
-  .t5 { background: #d9d0bd; }
-  .t6 { background: #d1c6c3; }
+  .t1 { background: #2e2a26; }
+  .t2 { background: #292b28; }
+  .t3 { background: #2f2925; }
+  .t4 { background: #282828; }
+  .t5 { background: #2d2b24; }
+  .t6 { background: #2b2626; }
   figcaption {
     margin-top: 14px;
     font-size: 0.9375rem;
@@ -125,7 +125,7 @@
   /* Contact */
   .contact {
     padding-block: clamp(80px, 12vw, 152px);
-    border-top: 1px solid rgba(43, 39, 35, 0.16);
+    border-top: 1px solid rgba(236, 230, 221, 0.14);
   }
   .contact h2 { font-size: clamp(2.5rem, 7vw, 5rem); }
   .contact p { margin-top: 20px; color: var(--ink-soft); max-width: 40ch; }
@@ -140,7 +140,7 @@
     text-underline-offset: 8px;
     overflow-wrap: anywhere;
   }
-  .email:hover { color: #744833; }
+  .email:hover { color: #e0a584; }
 
   footer { padding-bottom: 48px; font-size: 0.875rem; color: var(--ink-soft); }
 
