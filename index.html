@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Serena Lee Photography</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* Layout idea: one quiet column of generous space; the photographs are the only loud thing. */
+  :root {
+    --bg: #e8e4dd;          /* muted warm stone */
+    --ink: #2b2723;         /* soft warm black */
+    --ink-soft: #6a635b;    /* secondary text */
+    --accent: #8a5a44;      /* clay, used only for the button and link */
+    --frame: #d9d3c9;       /* placeholder tone */
+    --font-display: "Instrument Serif", "Iowan Old Style", Georgia, serif;
+    --font-body: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --gutter: clamp(20px, 5vw, 64px);
+    color-scheme: light;
+  }
+
+  * { box-sizing: border-box; margin: 0; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+
+  a:focus-visible, .button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+  }
+
+  .wrap {
+    width: 100%;
+    max-width: 1240px;
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+  }
+
+  /* Hero */
+  .hero {
+    padding-block: clamp(72px, 14vh, 152px) clamp(72px, 12vh, 128px);
+  }
+  .hero h1 {
+    font-size: clamp(3.5rem, 11vw, 8.5rem);
+  }
+  .hero h1 em { font-style: italic; }
+  .hero p {
+    margin-top: 28px;
+    max-width: 30ch;
+    font-size: clamp(1.125rem, 2vw, 1.375rem);
+    color: var(--ink-soft);
+  }
+  .button {
+    display: inline-block;
+    margin-top: 44px;
+    padding: 16px 34px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #f6f1ea;
+    font-weight: 500;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color .2s ease;
+  }
+  .button:hover { background: #744833; }
+
+  /* Portfolio */
+  .work { padding-bottom: clamp(88px, 14vw, 176px); }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(28px, 4vw, 56px) clamp(20px, 3vw, 44px);
+    list-style: none;
+    padding: 0;
+  }
+  figure { margin: 0; }
+  .frame {
+    aspect-ratio: 4 / 5;
+    background: var(--frame);
+    overflow: hidden;
+  }
+  .frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  /* Placeholder tones. Delete these and drop an <img> inside each .frame. */
+  .t1 { background: #d6cdc0; }
+  .t2 { background: #cfd0c6; }
+  .t3 { background: #dccdc4; }
+  .t4 { background: #c9c9c8; }
+  .t5 { background: #d9d0bd; }
+  .t6 { background: #d1c6c3; }
+  figcaption {
+    margin-top: 14px;
+    font-size: 0.9375rem;
+    color: var(--ink-soft);
+  }
+
+  /* About */
+  .about { padding-bottom: clamp(88px, 14vw, 176px); }
+  .about .wrap {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: clamp(28px, 6vw, 96px);
+  }
+  .about h2 { font-size: clamp(2.25rem, 5vw, 3.5rem); }
+  .about p { max-width: 52ch; }
+  .about p + p { margin-top: 1.25em; }
+
+  /* Contact */
+  .contact {
+    padding-block: clamp(80px, 12vw, 152px);
+    border-top: 1px solid rgba(43, 39, 35, 0.16);
+  }
+  .contact h2 { font-size: clamp(2.5rem, 7vw, 5rem); }
+  .contact p { margin-top: 20px; color: var(--ink-soft); max-width: 40ch; }
+  .email {
+    display: inline-block;
+    margin-top: 28px;
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 5vw, 3rem);
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 8px;
+    overflow-wrap: anywhere;
+  }
+  .email:hover { color: #744833; }
+
+  footer { padding-bottom: 48px; font-size: 0.875rem; color: var(--ink-soft); }
+
+  @media (max-width: 860px) {
+    .grid { grid-template-columns: repeat(2, 1fr); }
+    .about .wrap { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 520px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Serena <em>Lee</em></h1>
+    <p>I photograph weddings and portraits, and the quiet moments in between.</p>
+    <a class="button" href="#contact">Get in touch</a>
+  </div>
+</header>
+
+<main>
+  <section class="work" aria-label="Portfolio">
+    <div class="wrap">
+      <ul class="grid">
+        <li><figure><div class="frame t1"><img src="wedding-01.png" alt="A bride and groom kiss behind a white bouquet on a lakeside platform edged with white flowers" width="408" height="612"></div><figcaption>Wedding</figcaption></figure></li>
+        <li><figure><div class="frame t2" role="img" aria-label="Placeholder for a portrait photograph"></div><figcaption>Portrait</figcaption></figure></li>
+        <li><figure><div class="frame t3" role="img" aria-label="Placeholder for a wedding photograph"></div><figcaption>Wedding</figcaption></figure></li>
+        <li><figure><div class="frame t4" role="img" aria-label="Placeholder for a portrait photograph"></div><figcaption>Portrait</figcaption></figure></li>
+        <li><figure><div class="frame t5" role="img" aria-label="Placeholder for a wedding photograph"></div><figcaption>Wedding</figcaption></figure></li>
+        <li><figure><div class="frame t6" role="img" aria-label="Placeholder for a portrait photograph"></div><figcaption>Portrait</figcaption></figure></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="about" aria-labelledby="about-title">
+    <div class="wrap">
+      <h2 id="about-title">Hello, I'm Serena.</h2>
+      <div>
+        <p>I'm a freelance photographer. I work with couples on their wedding day and with people who want a portrait that actually looks like them.</p>
+        <p>I keep things relaxed and unhurried. You won't be posed into stiffness, and you'll get photographs that feel like the day did.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <h2 id="contact-title">Let's talk.</h2>
+      <p>Tell me your date or what you have in mind, and I'll reply within a couple of days.</p>
+      <a class="email" href="mailto:hello@serenalee.com">hello@serenalee.com</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">&copy; Serena Lee</div>
+</footer>
+
+</body>
+</html>
